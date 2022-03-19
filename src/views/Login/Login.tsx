@@ -13,9 +13,9 @@ export const Login = () => {
   };
   return (
     <div className="text-center">
-      <h1>Login</h1>
+      <h1 className="text-dark">Login</h1>
       <button onClick={() => loginUser()} className="btn btn-primary">
-        Iniciar
+        Iniciar Sesion
       </button>
     </div>
   );
