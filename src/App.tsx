@@ -1,6 +1,7 @@
+import { User } from "interfaces/global-interfaces";
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { AuthContext, initialState, TContextState, User } from "./context/AuthContext";
+import { AuthContext, initialState } from "./context/AuthContext";
 import { AppRouter } from "./routers/AppRouter";
 
 function App() {
@@ -8,12 +9,12 @@ function App() {
 
   const setUser = (user: User) => dispatch(user);
   return (
-    <BrowserRouter>
-      <AuthContext.Provider value={{ user, setUser }}>
+    <AuthContext.Provider value={{ user, setUser }}>
+      <BrowserRouter>
         {/* user y el dispatch se distribuiran en el AuthContext  */}
         <AppRouter />
-      </AuthContext.Provider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </AuthContext.Provider>
   );
 }
 

@@ -3,6 +3,8 @@ import { useSharedCounter } from "../../hooks/useSharedCounter";
 import { Sidebar } from "./components/Sidebar";
 import { MainCarousel } from "./components/MainCarousel";
 import "./styles.scss";
+import TableBet from "./components/TableBet";
+
 export const Home = () => {
   //CustomHook para compartir un useState() entre 2 o mas componentes
   const { count } = useSharedCounter();
@@ -19,7 +21,7 @@ export const Home = () => {
             <div className="col-9">
               <MainCarousel />
             </div>
-            <div className="col p-3  coupon me-3">
+            <div className="col p-3 coupon me-3">
               <div className="d-flex align-items-start flex-column h-100">
                 <button className="btn btn-primary mb-auto ">
                   <i className="fas fa-trophy"></i>
@@ -37,6 +39,12 @@ export const Home = () => {
 
                 <button className="btn btn-primary mt-auto ">¿Como empezar?</button>
               </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-9">
+              <TableBet />
             </div>
           </div>
         </div>
